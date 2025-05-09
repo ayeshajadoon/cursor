@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --light-bg: #eff6ff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom styles beyond Tailwind */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-100 transition;
+}
+
+/* Animation effects */
+.hover-lift {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  @apply hidden;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  @apply block;
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "A responsive landing page built with HTML and Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.css",
+    "watch:css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
+    "dev": "npx live-server --open=index.html & npm run watch:css",
+    "build": "npm run build:css"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "html",
+    "responsive",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "live-server": "^1.2.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}
